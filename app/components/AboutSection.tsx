@@ -8,102 +8,102 @@ const AboutSection = () => {
   return (
     <section
       id="about"
-      className="relative py-20 px-4 overflow-hidden bg-gradient-to-b from-gray-900 via-gray-950 to-black text-white"
+      className="relative py-24 px-4 bg-gradient-to-br from-black via-gray-950 to-gray-900 text-white overflow-hidden"
     >
-      {/* ✨ Star Background Effect */}
-      <div className="absolute inset-0 overflow-hidden z-0">
-        <div className="stars"></div>
-        <div className="stars2"></div>
-        <div className="stars3"></div>
-      </div>
+      {/* 🌌 Background Glow */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(99,102,241,0.15),transparent_60%)]"></div>
 
       <div className="relative z-10">
-        <SectionTitle title="About Me" className="text-white" />
+        <SectionTitle title="About Me" />
 
         <motion.div
-          className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-10 mt-10"
-          initial={{ opacity: 0, y: 30 }}
+          className="max-w-6xl mx-auto mt-14 grid md:grid-cols-2 gap-12 items-center"
+          initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          {/* 🖼️ Left: Image */}
+          {/* 🖼 Profile Image */}
           <motion.div
-            className="flex-1 flex justify-center md:justify-start"
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, scale: 0.9 }}
+            whileInView={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8 }}
+            className="flex justify-center"
           >
-            <div className="w-90 h-90 md:w-100 md:h-100 rounded-2xl overflow-hidden border-4 border-gray-700 shadow-2xl shadow-indigo-900/50 hover:shadow-indigo-500/80 hover:scale-105 transition-all duration-500">
-              <img
-                src="/images/sneara.jfif"
-                alt="Sneara Parvin"
-                className="object-cover w-full h-full"
-              />
+            <div className="relative p-1 rounded-3xl bg-gradient-to-tr from-pink-500 via-purple-500 to-indigo-500">
+              <div className="rounded-3xl overflow-hidden bg-black">
+                <img
+                  src="/images/sneara.jfif"
+                  alt="Sneara Parvin"
+                  className="w-80 h-80 object-cover hover:scale-105 transition duration-500"
+                />
+              </div>
             </div>
           </motion.div>
 
-          {/* 📝 Right: About Details */}
+          {/* 📝 Content */}
           <motion.div
-            className="flex-1 text-center md:text-left space-y-4 text-gray-300"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 40 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
+            className="space-y-5 text-gray-300"
           >
-            <h3 className="text-xl md:text-2xl font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-indigo-500 bg-clip-text text-transparent">
-              I'm Sneara Parvin ✨
+            <h3 className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-indigo-400 bg-clip-text text-transparent">
+              I’m Sneara Parvin ✨
             </h3>
 
-            <p className="text-base leading-relaxed">
-              Hi! I'm <span className="font-semibold text-cyan-400">Sneara Parvin</span>, a passionate
-              <span className="font-semibold text-pink-400"> Frontend Developer</span> from Bangladesh 🇧🇩. I love building modern and responsive web apps with clean, maintainable code.
+            <p>
+              Hi! I’m <span className="text-cyan-400 font-semibold">Sneara Parvin</span>, a passionate  
+              <span className="text-pink-400 font-semibold"> Full Stack Developer</span> from Bangladesh 🇧🇩.
+              I love building scalable, modern web applications with clean architecture.
             </p>
 
-            <p className="text-base leading-relaxed">
-              I completed my <span className="font-semibold text-cyan-400">B.Sc. in Computer Science and Engineering</span> from 
-              <span className="font-semibold text-pink-400"> North Western University</span> in 2024 with a CGPA of 
-              <span className="font-semibold text-cyan-400"> 3.38</span>. Before that, I completed my 
-              <span className="font-semibold"> HSC in 2018</span> and <span className="font-semibold">SSC in 2016</span>.
+            <p>
+              I completed my <span className="text-cyan-400 font-semibold">B.Sc. in CSE</span> from  
+              <span className="text-pink-400 font-semibold"> North Western University</span> (2024) with  
+              <span className="text-cyan-400 font-semibold"> CGPA 3.38</span>.
             </p>
 
-            <p className="text-base leading-relaxed">
-              My web development journey started in <span className="text-pink-400 font-semibold">December 2024</span>. Since then, I’ve been learning 
-              <span className="text-cyan-400 font-semibold"> React, Next.js, Tailwind CSS</span> — and exploring backend and AI tools to create scalable applications.
+            <p>
+              My development journey started in <span className="text-pink-400 font-semibold">June 2024</span>.  
+              I work with <span className="text-cyan-400 font-semibold">
+                React, Next.js, Tailwind CSS, Node.js, Express & Prisma
+              </span> and I’m exploring AI-powered tools for smarter applications.
             </p>
 
-            <p className="text-base leading-relaxed">
-              I’m deeply motivated by problem-solving and innovation. My goal is to keep learning, growing, and building meaningful digital experiences.
+            <p>
+              I enjoy solving real-world problems, learning new technologies, and building meaningful digital products.
             </p>
 
             {/* 🌐 Social Links */}
-            <div className="pt-4">
-              <h4 className="text-lg font-semibold mb-2">Connect With Me</h4>
-              <div className="flex justify-center md:justify-start gap-5 text-xl">
+            <div className="pt-6">
+              <h4 className="text-lg font-semibold mb-3">Connect With Me</h4>
+              <div className="flex gap-5 text-xl">
                 <a
-                  href="https://facebook.com/snearaparvin.dev"
+                  href="https://www.facebook.com/sneyara.parabhina/"
                   target="_blank"
-                  className="text-blue-400 hover:scale-125 hover:text-pink-400 transition-all duration-300"
+                  className="hover:text-pink-400 hover:scale-125 transition"
                 >
                   <FaFacebookF />
                 </a>
                 <a
-                  href="https://wa.me/88017XXXXXXXX"
+                  href="https://wa.me/8801832346270"
                   target="_blank"
-                  className="text-green-400 hover:scale-125 hover:text-pink-400 transition-all duration-300"
+                  className="hover:text-green-400 hover:scale-125 transition"
                 >
                   <FaWhatsapp />
                 </a>
                 <a
-                  href="https://github.com/snearaparvin"
+                  href="https://github.com/Sneara0"
                   target="_blank"
-                  className="text-gray-200 hover:scale-125 hover:text-pink-400 transition-all duration-300"
+                  className="hover:text-gray-400 hover:scale-125 transition"
                 >
                   <FaGithub />
                 </a>
                 <a
-                  href="https://linkedin.com/in/snearaparvin"
+                  href="https://www.linkedin.com/in/sneara-parvin-aa0a4b285/"
                   target="_blank"
-                  className="text-blue-500 hover:scale-125 hover:text-pink-400 transition-all duration-300"
+                  className="hover:text-blue-400 hover:scale-125 transition"
                 >
                   <FaLinkedinIn />
                 </a>
@@ -112,50 +112,6 @@ const AboutSection = () => {
           </motion.div>
         </motion.div>
       </div>
-
-      {/* 🌌 Star Animation */}
-      <style jsx>{`
-        .stars,
-        .stars2,
-        .stars3 {
-          position: absolute;
-          width: 100%;
-          height: 100%;
-          background-repeat: repeat;
-          background-position: 0 0;
-          z-index: 0;
-        }
-
-        .stars {
-          background-image: radial-gradient(white 1px, transparent 1px);
-          background-size: 3px 3px;
-          animation: moveStars 60s linear infinite;
-          opacity: 0.2;
-        }
-
-        .stars2 {
-          background-image: radial-gradient(white 1px, transparent 1px);
-          background-size: 2px 2px;
-          animation: moveStars 90s linear infinite;
-          opacity: 0.15;
-        }
-
-        .stars3 {
-          background-image: radial-gradient(white 1px, transparent 1px);
-          background-size: 1px 1px;
-          animation: moveStars 120s linear infinite;
-          opacity: 0.1;
-        }
-
-        @keyframes moveStars {
-          from {
-            background-position: 0 0;
-          }
-          to {
-            background-position: 10000px 10000px;
-          }
-        }
-      `}</style>
     </section>
   );
 };

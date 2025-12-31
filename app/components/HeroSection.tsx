@@ -9,7 +9,7 @@ const HeroSection = () => {
   const [text] = useTypewriter({
     words: [
       "Hi, I'm Sneara",
-      "Frontend Developer 💻",
+      "Full Stack Developer 💻",
       "Next.js | React | Tailwind CSS",
       "I Build Stunning Web Experiences",
     ],
@@ -50,7 +50,7 @@ const HeroSection = () => {
         </h1>
 
         <p className="text-xs sm:text-sm md:text-base sm:text-sm text-gray-300 max-w-xl mx-auto md:mx-0 leading-relaxed">
-          I'm <span className=" text-indigo-400">Sneara Parvin</span>, a frontend developer creating modern, responsive, and elegant web experiences with React, Next.js, and Tailwind CSS. I focus on building clean interfaces and smooth user interactions that feel natural and delightful.
+          I'm <span className=" text-indigo-400">Sneara Parvin</span>, a Full Stack developer creating modern, responsive, and elegant web experiences with React, Next.js, and Tailwind CSS. I focus on building clean interfaces and smooth user interactions that feel natural and delightful.
         </p>
 
         <div className="flex justify-center md:justify-start flex-wrap gap-3 mt-4">
