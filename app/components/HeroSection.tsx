@@ -42,7 +42,7 @@ const HeroSection = () => {
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
       >
-        <h1 className="text-xl sm:text-xl md:text-4xl lg:text-2xl font-semibold text-white">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-white">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-white to-pink-600 animate-pulse">
             {text}
           </span>
