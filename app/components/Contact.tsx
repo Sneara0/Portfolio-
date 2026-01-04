@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
 
-// ✅ Environment variables safe ভাবে নেওয়া
 const serviceID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
 const templateID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
@@ -16,12 +15,14 @@ const Contact = () => {
   const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // ✅ Vercel build crash আটকানোর জন্য check
+
     if (!serviceID || !templateID || !publicKey) {
       console.error("❌ EmailJS environment variables missing");
       alert("Email service is not configured properly.");
       return;
     }
+    console.log("EmailJS Service ID:", process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID);
+
 
     setLoading(true);
     const form = e.currentTarget;
