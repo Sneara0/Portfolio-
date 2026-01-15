@@ -1,11 +1,5 @@
 {
   "version": 2,
-  "builds": [
-    {
-      "src": "package.json",
-      "use": "@vercel/next"
-    }
-  ],
   "routes": [
     {
       "src": "/(.*)",
@@ -13,9 +7,9 @@
     }
   ],
   "env": {
-    "NEXT_PUBLIC_EMAILJS_SERVICE_ID": "NEXT_PUBLIC_EMAILJS_SERVICE_ID",
-    "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID": "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID",
-    "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY": "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY",
-    "DATABASE_URL": "DATABASE_URL"
+    "NEXT_PUBLIC_EMAILJS_SERVICE_ID": "your_real_service_id",
+    "NEXT_PUBLIC_EMAILJS_TEMPLATE_ID": "your_real_template_id",
+    "NEXT_PUBLIC_EMAILJS_PUBLIC_KEY": "your_real_public_key",
+    "DATABASE_URL": "your_real_database_url"
   }
 }
